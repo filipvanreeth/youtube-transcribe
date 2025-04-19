@@ -1,0 +1,10 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: youtube-transcribe
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["php", "bin/console", "youtube-transcribe"]
